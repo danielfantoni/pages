@@ -1,3 +1,13 @@
+<?php
+
+require 'conn.php';
+$sql = "SELECT * FROM portifolio ORDER BY RAND()";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -15,7 +25,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +42,7 @@
 
 </head>
 
-<body class="index-page">
+<body>
   <header id="header" class="header d-flex flex-column justify-content-center">
     <i class="header-toggle d-xl-none bi bi-list"></i>
     <nav id="navmenu" class="navmenu">
@@ -72,9 +84,9 @@
       <div class="container section-title" data-aos="fade-up">
         <div class="row justify-content-center">
           <h2>SOBRE</h2>
-        <p class="font-size-01 font-thin col-lg-7">
-          Desde 2017 atuando na área de Desenvolvimento Web e e-Learning, criando soluções digitais voltadas para educação online e corporativa.
-        </p>
+          <p class="font-size-01 font-thin col-lg-7">
+            Desde 2017 atuando na área de Desenvolvimento Web e e-Learning, criando soluções digitais voltadas para educação online e corporativa.
+          </p>
         </div>
       </div>
       <!-- End Section Title -->
@@ -88,18 +100,18 @@
             <p class="fst-italic py-3">
               Analista Educação Corporativa | Design Instrucional | Desenvolvedor Web | Programador
             </p>
-            <div class="row">
+            <div class="row w-100">
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Nascimento:</strong> <span>Jan 1986</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.tbyte.site</span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.tbyte.site</span></li> -->
                   <li><i class="bi bi-chevron-right"></i> <strong>Telefone:</strong> <span>+55 31 99237-8609</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Localização:</strong> <span>Belo Horizonte, MG</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Idade:</strong> <span id="showIdade"></span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Idade:</strong> <span id="showIdade"></span></li> -->
                   <li><i class="bi bi-chevron-right"></i> <strong>Nível:</strong> <span>Master</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>danielfantoni@msn.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Disponível</span></li>
@@ -117,10 +129,10 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <div class="row justify-content-center">
-        <h2>SKILLS</h2>
-        <p class="font-size-01 col-lg-8">
-          Agregando e aperfeiçoando um conjunto de habilidades técnicas e criativas que me permitem atuar em todas as etapas de um projeto digital. Entre meus principais skills, destaco:
-        </p>
+          <h2>SKILLS</h2>
+          <p class="font-size-01 col-lg-8">
+            Agregando e aperfeiçoando um conjunto de habilidades técnicas e criativas que me permitem atuar em todas as etapas de um projeto digital. Entre meus principais skills, destaco:
+          </p>
         </div>
       </div>
       <!-- End Section Title -->
@@ -173,9 +185,9 @@
             <!-- End Skills Item -->
             <div class="progress">
               <span class="skill"><span>Adobe Animate <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
             <!-- End Skills Item -->
             <div class="progress">
@@ -213,8 +225,8 @@
           <h2>RESUMO</h2>
           <p class="font-size-01 col-lg-10">
             Experiência no desenvolvimento de cursos interativos, sistemas de aprendizagem e conteúdos
-              compatíveis com o protocolo SCORM, garantindo integração com diferentes plataformas LMS. Minha atuação une tecnologia,
-              design instrucional e usabilidade, com foco em oferecer experiências de aprendizagem eficazes e inovadoras.
+            compatíveis com o protocolo SCORM, garantindo integração com diferentes plataformas LMS. Minha atuação une tecnologia,
+            design instrucional e usabilidade, com foco em oferecer experiências de aprendizagem eficazes e inovadoras.
           </p>
         </div>
       </div>
@@ -305,10 +317,12 @@
     <section id="portfolio" class="portfolio section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
+        <div class="row justify-content-center">
         <h2>PORTIFÓLIO</h2>
-        <p class="font-size-01">
+        <p class="font-size-01 col-lg-8">
           Abaixo, apresento alguns dos trabalhos relevantes em que contribuí, destacando aspectos de Desenvolvimento Web, Design Instrucional e Design Gráfico.
         </p>
+        </div>
       </div>
       <!-- End Section Title -->
       <div class="container d-flex justify-content-center">
@@ -325,74 +339,18 @@
           <!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <!-- Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-html5">
-              <img src="assets/img/thumb-portfolio/iveco_cssp.png" class="img-fluid img-circle" alt="">
-              <div class="portfolio-info">
-                <h4>HTML5</h4>
-                <p>Reveal.js, HTML5, Quiz</p>
-                <a href="assets/videos/portifolio/modelo.mp4" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <?php foreach ($items as $item): ?>
+              <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item <?php echo $item['filtro']; ?>">
+                <img src="<?php echo $item['img']; ?>" class="img-fluid img-circle" alt="">
+                <div class="portfolio-info">
+                  <h4><?php echo $item['titulo']; ?></h4>
+                  <p><?php echo $item['descricao']; ?></p>
+                  <a href="<?php echo $item['img']; ?>" title="<?php echo $item['descricao']; ?>" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
               </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <!-- Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-html5_adobe-animate">
-              <img src="assets/img/thumb-portfolio/video1.jpg" class="img-fluid img-circle" alt="">
-              <div class="portfolio-info">
-                <h4>Vídeo SCORM</h4>
-                <p>Reveal.js, HTML5</p>
-                <a href="assets/videos/portifolio/modelo.mp4" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <!-- Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-html5_flash">
-              <img src="assets/img/thumb-portfolio/iveco_cssp.png" class="img-fluid img-circle" alt="">
-              <div class="portfolio-info">
-                <h4>HTML5</h4>
-                <p>Reveal.js, HTML5, Quiz</p>
-                <a href="assets/videos/portifolio/modelo.mp4" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <!-- Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-video_scorm">
-              <img src="assets/img/thumb-portfolio/video1.jpg" class="img-fluid img-circle" alt="">
-              <div class="portfolio-info">
-                <h4>Vídeo SCORM</h4>
-                <p>Reveal.js, HTML5</p>
-                <a href="assets/videos/portifolio/modelo.mp4" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <!-- Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storyline_360">
-              <img src="assets/img/thumb-portfolio/video1.jpg" class="img-fluid img-circle" alt="">
-              <div class="portfolio-info">
-                <h4>Vídeo SCORM</h4>
-                <p>Reveal.js, HTML5</p>
-                <a href="assets/videos/portifolio/modelo.mp4" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <!-- Portfolio Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-lms_lxp">
-              <img src="assets/img/thumb-portfolio/video1.jpg" class="img-fluid img-circle" alt="">
-              <div class="portfolio-info">
-                <h4>LMS | LXP</h4>
-                <p>Governaça de Plataformas LMS e LXP</p>
-                <a href="assets/videos/portifolio/modelo.mp4" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            
-
+              <!-- End Portfolio Item -->
+            <?php endforeach; ?>
           </div>
           <!-- End Portfolio Container -->
         </div>
@@ -404,10 +362,12 @@
     <section id="services" class="services section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
+        <div class="row justify-content-center">
         <h2>SERVIÇOS</h2>
-        <p class="font-size-01">
-          Competências me permitem unir tecnologia, didática e design para entregar soluções inovadoras e eficazes em educação online.  
+        <p class="font-size-01 col-lg-8">
+          Competências me permitem unir tecnologia, didática e design para entregar soluções inovadoras e eficazes em educação online.
         </p>
+        </div>
       </div>
       <!-- End Section Title -->
       <div class="container">
@@ -513,7 +473,7 @@
       <!-- Section Title -->
       <div class="container section-title my-3" data-aos="fade-up">
         <h2>CONTATO</h2>
-        <p class="font-size-01" >Entre em contato através das opções abaixo</p>
+        <p class="font-size-01">Entre em contato através das opções abaixo</p>
       </div>
       <!-- End Section Title -->
       <div class="container mb-5" data-aos="fade" data-aos-delay="100">
@@ -543,6 +503,7 @@
     </section>
     <!-- /Contact Section -->
   </main>
+
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
       <div class="social-links d-flex justify-content-center">
@@ -562,24 +523,22 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
   <!-- Preloader -->
   <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
 </body>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
 </html>
