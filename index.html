@@ -1,12 +1,4 @@
-<?php
 
-require 'conn.php';
-$sql = "SELECT * FROM portifolio ORDER BY RAND()";
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$items = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -316,7 +308,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
         <div class="row justify-content-center">
         <h2>PORTIFÓLIO</h2>
         <p class="font-size-01 col-lg-8">
@@ -327,7 +319,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <!-- End Section Title -->
       <div class="container d-flex justify-content-center">
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+          <ul class="portfolio-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-html5">HTML5</li>
             <li data-filter=".filter-html5_adobe-animate">HTML5 - Adobe Animate</li>
@@ -338,20 +330,88 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </ul>
           <!-- End Portfolio Filters -->
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <?php foreach ($items as $item): ?>
-              <!-- Portfolio Item -->
-              <div class="col-lg-4 col-md-6 portfolio-item isotope-item <?php echo $item['filtro']; ?>">
-                <img src="<?php echo $item['img']; ?>" class="img-fluid img-circle" alt="">
+          <div class="row gy-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 822px;">
+                          <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-lms_lxp" style="position: absolute; left: 0px; top: 0px;">
+                <img src="assets/img/portifolio/leroy_lex_relatorios.png" class="img-fluid img-circle" alt="">
                 <div class="portfolio-info">
-                  <h4><?php echo $item['titulo']; ?></h4>
-                  <p><?php echo $item['descricao']; ?></p>
-                  <a href="<?php echo $item['img']; ?>" title="<?php echo $item['descricao']; ?>" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <h4>LMS | LXP</h4>
+                  <p>Administração de plataforma LXP - Relatórios</p>
+                  <a href="assets/img/portifolio/leroy_lex_relatorios.png" title="Administração de plataforma LXP - Relatórios" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
               <!-- End Portfolio Item -->
-            <?php endforeach; ?>
-          </div>
+                          <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storyline_360" style="position: absolute; left: 306.719px; top: 0px;">
+                <img src="assets/img/portifolio/ram_dakota.png" class="img-fluid img-circle" alt="">
+                <div class="portfolio-info">
+                  <h4>Articulate Storyline 360</h4>
+                  <p>HTML5, JS, SCORM</p>
+                  <a href="assets/img/portifolio/ram_dakota.png" title="HTML5, JS, SCORM" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+                          <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-html5" style="position: absolute; left: 613.438px; top: 0px;">
+                <img src="assets/img/portifolio/iveco_cssp.png" class="img-fluid img-circle" alt="">
+                <div class="portfolio-info">
+                  <h4>HTML5</h4>
+                  <p>Reveal.js, HTML5, Quiz</p>
+                  <a href="assets/img/portifolio/iveco_cssp.png" title="Reveal.js, HTML5, Quiz" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+                          <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storyline_360" style="position: absolute; left: 0px; top: 274px;">
+                <img src="assets/img/portifolio/jeep_avenger.png" class="img-fluid img-circle" alt="">
+                <div class="portfolio-info">
+                  <h4>Articulate Storyline 360</h4>
+                  <p>HTML5, JS, SCORM</p>
+                  <a href="assets/img/portifolio/jeep_avenger.png" title="HTML5, JS, SCORM" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+                          <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-lms_lxp" style="position: absolute; left: 306.719px; top: 274px;">
+                <img src="assets/img/portifolio/leroy_lex_usuarios.png" class="img-fluid img-circle" alt="">
+                <div class="portfolio-info">
+                  <h4>LMS | LXP</h4>
+                  <p>Administração de plataforma LXP - Usuários</p>
+                  <a href="assets/img/portifolio/leroy_lex_usuarios.png" title="Administração de plataforma LXP - Usuários" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+                          <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-html5_flash" style="position: absolute; left: 613.438px; top: 274px;">
+                <img src="assets/img/portifolio/iveco_conc_fund_motor.png" class="img-fluid img-circle" alt="">
+                <div class="portfolio-info">
+                  <h4>Conversão Flash - HTML5</h4>
+                  <p>Animate, HTML5, SCORM</p>
+                  <a href="assets/img/portifolio/iveco_conc_fund_motor.png" title="Animate, HTML5, SCORM" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+                          <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-lms_lxp" style="position: absolute; left: 0px; top: 548px;">
+                <img src="assets/img/portifolio/leroy_lex_certificados.png" class="img-fluid img-circle" alt="">
+                <div class="portfolio-info">
+                  <h4>LMS | LXP</h4>
+                  <p>Administração de plataforma LXP - Certificados</p>
+                  <a href="assets/img/portifolio/leroy_lex_certificados.png" title="Administração de plataforma LXP - Certificados" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+                          <!-- Portfolio Item -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-html5" style="position: absolute; left: 306.719px; top: 548px;">
+                <img src="assets/img/portifolio/stellantis_motor_turbo_flex.png" class="img-fluid img-circle" alt="">
+                <div class="portfolio-info">
+                  <h4>HTML5</h4>
+                  <p>Reveal.js, HTML5, Quiz</p>
+                  <a href="assets/img/portifolio/stellantis_motor_turbo_flex.png" title="Reveal.js, HTML5, Quiz" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+                      </div>
           <!-- End Portfolio Container -->
         </div>
       </div>
