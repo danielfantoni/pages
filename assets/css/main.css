@@ -1523,3 +1523,6 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+i.bi { -webkit-text-stroke: 0.8px; }
