@@ -760,6 +760,11 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 10px;
 }
+@media (max-width: 575.98px) {
+  .resume .resume-item h4 {
+    padding-right: 3rem;
+  }
+}
 
 .resume .resume-item h5 {
   font-size: 16px;
@@ -840,6 +845,7 @@ section,
 
 .portfolio .portfolio-item {
   position: relative;
+  justify-items: center;
   overflow: hidden;
 }
 
