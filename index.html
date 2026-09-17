@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Daniel Fantoni</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+
 
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -22,8 +22,8 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/fonts/style.css" rel="stylesheet">
 
   <!-- Main CSS File -->
@@ -31,81 +31,936 @@
 
 </head>
 
-<body>
-  <header id="header" class="header d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="full/" target="_blank" class=""><i class="bi bi-file-person navicon"></i><span>Currículo</span></a></li>
-        <li><a href="min/" target="_blank" class="active"><i class="bi bi-journals navicon"></i><span>Portifólio</span></a></li>
-      </ul>
-    </nav>
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="assets/img/logo.webp" alt="">
+      <h1 class="sitename">FolioOne</h1> 
+    </a> -->
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#resume">Resumo</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#portfolio">Portifólio</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://www.instagram.com/_fantonidaniel/#" target="_blank" class="instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/daniel-fantoni-7220991b0/" target="_blank" class="linkedin"><i
+            class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
   </header>
 
   <main class="main">
+
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background hero-bg">
-      <div class="container" data-aos="zoom-out">
-        <div class="row w-100 px-3 px-sm-0 align-items-center justify-content-center">
-          <div class="col-lg-5 pb-5">
-            <h2>Daniel Fantoni</h2>
-            <p><span class="typed font-typed d-sm-none d-inline">Acesse os links pelo menu</span><span
-                class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <p><span class="typed font-typed d-none d-sm-inline">Acesse pelos links</span><span
-                class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <!-- <div class="social-links">
-              <a href="https://www.instagram.com/_fantonidaniel/#" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/daniel-fantoni-7220991b0/" target="_blank"><i
-                  class="bi bi-linkedin"></i></a>
-            </div> -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="hero-content pt-5">
+              <h1 data-aos="fade-up" data-aos-delay="200">Daniel <span class="highlight">Fantoni</span></h1>
+              <h2 data-aos="fade-up" data-aos-delay="300">Sou <span class="typed font-typed"
+                  data-typed-items="Desenvolvedor, Desenvolvedor WEB, Desenvolvedor e-learning, Especialista SCORM, Desenvolvedor Objetos Educacionais, Gerenciamento LMS / LXP, Designer Gráfico, Freelancer, UI/UX Designer"></span>
+              </h2>
+            </div>
           </div>
-          <div class="col-lg-5">
-            <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+          <div class="col-lg-6 order-1 order-lg-2 px-5 px-sm-0">
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+              <div class="image-wrapper">
+                <img src="assets/img/hero-img.png" alt="" class="img-fluid">
+                <div class="floating-elements">
+                  <div class="floating-card elearning" data-aos="fade-right" data-aos-delay="600">
+                    <i class="bi bi-mortarboard"></i>
+                  </div>
+                  <div class="floating-card design" data-aos="fade-left" data-aos-delay="700">
+                    <i class="bi bi-palette"></i>
+                  </div>
+                  <div class="floating-card code" data-aos="fade-right" data-aos-delay="800">
+                    <i class="bi bi-code-slash"></i>
+                  </div>
+                  <div class="floating-card design-grafico" data-aos="fade-right" data-aos-delay="800">
+                    <i class="bi bi-vector-pen"></i>
+                  </div>
+                  <div class="floating-card creativity" data-aos="fade-up" data-aos-delay="900">
+                    <i class="bi bi-lightbulb"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
-    </section>
-    <!-- /Hero Section -->
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Sobre</h2>
+        <p class="px-1 px-sm-0">Desde 2017 atuando na área de Desenvolvimento Web e e-Learning, criando soluções
+          digitais voltadas para
+          educação online e corporativa.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Intro + Photo -->
+        <div class="row align-items-center justify-content-between gy-5 mb-5">
+          <div class="col-lg-7" data-aos="fade-right" data-aos-delay="150">
+            <div class="intro-content pt-0 pt-sm-5 px-3 px-sm-0">
+
+              <h2 class="headline">Daniel Fantoni Ferreira</h2>
+              <p class="lead">
+                Analista Educação Corporativa | Design Instrucional | Desenvolvedor Web | Programador
+              </p>
+
+
+              <div class="cta-group">
+                <a href="#mais" class="btn-ghost">
+                  Saiba Mais <i class="bi bi-arrow-down-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div id="mais" class="col-lg-5" data-aos="zoom-in" data-aos-delay="250">
+            <figure class="profile-figure text-center text-lg-end px-5 px-sm-0">
+              <img src="assets/img/about-img.png" alt="Portrait of Alex" class="img-fluid profile-photo">
+            </figure>
+          </div>
+        </div>
+        <!-- End Intro + Photo -->
+
+        <!-- Skills Grid -->
+        <!-- <div class="mb-5">
+          <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+              <div class="skill-item">
+                <i class="bi bi-layout-text-window"></i>
+                <h3>Nascimento</h3>
+                <p>Jan 1986</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="180">
+              <div class="skill-item">
+                <i class="bi bi-code-slash"></i>
+                <h3>Telefone</h3>
+                <p>+55 31 99237-8609</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+              <div class="skill-item">
+                <i class="bi bi-phone"></i>
+                <h3>Localização</h3>
+                <p>Belo Horizonte, MG</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-item">
+                <i class="bi bi-camera"></i>
+                <h3>Nível:</h3>
+                <p>Master</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-item">
+                <i class="bi bi-camera"></i>
+                <h3>Nível:</h3>
+                <p>Master</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- End Skills Grid -->
+
+        <!-- Journey Timeline -->
+        <div class="mb-5">
+          <div class="row g-4 justify-content-center">
+            <div class="col-11 col-lg-8">
+              <div class="row g-0 g-sm-4 justify-content-center">
+                <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                  <article class="timeline-item">
+                    <span class="dot"></span>
+                    <time>Nascimento</time>
+                    <!-- <h4>B.A. in Design</h4> -->
+                    <p>Jan 1986</p>
+                  </article>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                  <article class="timeline-item">
+                    <span class="dot"></span>
+                    <time>Nível</time>
+                    <!-- <h4>B.A. in Design</h4> -->
+                    <p>Master</p>
+                  </article>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                  <article class="timeline-item">
+                    <span class="dot"></span>
+                    <time>Telefone</time>
+                    <!-- <h4>B.A. in Design</h4> -->
+                    <p>+55 31 99237-8609</p>
+                  </article>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                  <article class="timeline-item">
+                    <span class="dot"></span>
+                    <time>E-mail</time>
+                    <!-- <h4>B.A. in Design</h4> -->
+                    <p>danielfantoni@msn.com</p>
+                  </article>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                  <article class="timeline-item">
+                    <span class="dot"></span>
+                    <time>Localização</time>
+                    <!-- <h4>B.A. in Design</h4> -->
+                    <p>Belo Horizonte, MG</p>
+                  </article>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                  <article class="timeline-item">
+                    <span class="dot"></span>
+                    <time>Freelance</time>
+                    <!-- <h4>B.A. in Design</h4> -->
+                    <p>Disponível</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Journey Timeline -->
+
+
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p class="px-1 px-sm-0">Agregando e aperfeiçoando um conjunto de habilidades técnicas e criativas que me
+          permitem atuar em todas as
+          etapas de um projeto digital. Entre meus principais skills, destaco:</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 justify-content-center skills-animation">
+
+          <div class="col-12 col-lg-12">
+            <div class="row justify-content-center">
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-box">
+                  <h3>HTML</h3>
+                  <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p> -->
+                  <span class="text-end d-block">100%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-box">
+                  <h3>CSS</h3>
+                  <!-- <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p> -->
+                  <span class="text-end d-block">90%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-box">
+                  <h3>JavaScript</h3>
+                  <!-- <p>Neque porro quisquam est qui dolorem ipsum quia dolor.</p> -->
+                  <span class="text-end d-block">95%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-box">
+                  <h3>PHP</h3>
+                  <!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p> -->
+                  <span class="text-end d-block">80%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-box">
+                  <h3>PROTOCOLO SCORM / E-LEARNING</h3>
+                  <!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p> -->
+                  <span class="text-end d-block">100%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-box">
+                  <h3>Articulate/ Storyline</h3>
+                  <!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p> -->
+                  <span class="text-end d-block">95%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-box">
+                  <h3>ADOBE ANIMATE</h3>
+                  <!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p> -->
+                  <span class="text-end d-block">90%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-box">
+                  <h3>Adobe Photoshop</h3>
+                  <!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p> -->
+                  <span class="text-end d-block">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-box">
+                  <h3>ADOBE ILLUSTRATOR</h3>
+                  <!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p> -->
+                  <span class="text-end d-block">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-10 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-box">
+                  <h3>Adobe Premiere</h3>
+                  <!-- <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p> -->
+                  <span class="text-end d-block">70%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                      aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resumo</h2>
+        <p class="px-3 px-sm-0">Experiência no desenvolvimento de cursos interativos, sistemas de aprendizagem e
+          conteúdos compatíveis com o
+          protocolo SCORM, garantindo integração com diferentes plataformas LMS. Minha atuação une tecnologia, design
+          instrucional e usabilidade, com foco em oferecer experiências de aprendizagem eficazes e inovadoras.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-12 col-lg-6 px-4 px-sm-0">
+
+            <!-- Education Section -->
+            <div class="resume-item" data-aos="fade-up">
+              <h3 class="resume-title">Formação</h3>
+
+              <div class="resume-content">
+                <article class="education-item">
+                  <h4>Análise e Desenvolvimento de Sistemas</h4>
+                  <h5>02/2010 - 12/2012</h5>
+                  <p class="institution"><em>Anhanguera Educacional S/A</em></p>
+                  <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum
+                    qui ut dignissimos deleniti nerada porti sand markend</p> -->
+                </article>
+
+                <article class="education-item">
+                  <h4>Design Gráfico e Web Design</h4>
+                  <h5>02/2009 - 12/2009</h5>
+                  <p class="institution"><em>SOS Computadores</em></p>
+                  <p>
+                  <ul>
+                    <li>Design Gráfico: Adobe Photoshop, Illustrator, Indesign, Animate, CorelDraw</li>
+                    <li>Web Design: Adobe Dreamweaver, PHP, HTML5, CSS, JavaScript, Asp.net, Microsoft Visual Studio
+                    </li>
+                  </ul>
+                  </p>
+                </article>
+              </div>
+            </div><!-- End Education Section -->
+
+
+          </div>
+
+          <div class="col-12 col-lg-6 px-4 px-sm-0">
+            <!-- Experience Section -->
+            <div class="resume-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Experiência Profissional</h3>
+
+              <div class="resume-content">
+                <article class="experience-item">
+                  <h4>Analista de Educação Corporativa</h4>
+                  <h5>05/2023 - 08/2025 | Remoto</h5>
+                  <p class="company"><em>Leroy Merlin</em></p>
+                  <ul>
+                    <li>Desenvolvimento e gerenciamento de conteúdo Web / e-Learning para as Academias de Vendas,
+                      Backoffice, Digital, Metier, Supply Chain, Venda Projeto</li>
+                    <li>Responsável pelo desenvolvimento de objetos educacionais</li>
+                    <li>Gamificação de conteúdos para e-Learning</li>
+                    <li>Especialista no padrão SCORM</li>
+                    <li>Governança de Plataforma LMS / LXP</li>
+                    <li>Desenvolvimento de conteúdos em HTML5 / CSS / JS</li>
+                    <li>Desenvolvimento de conteúdos em Articulate Storyline 360</li>
+                    <li>Soluções SCORM para conteúdos em vídeo</li>
+                    <li>Soluções SCORM para conteúdos em PDF</li>
+                  </ul>
+                </article>
+
+                <article class="experience-item">
+                  <h4>Desenvolvedor Web | JavaScript | e-Learning</h4>
+                  <h5>12/2017 - 11/2022 | Presencial e Remoto</h5>
+                  <p class="company"><em>ISVOR Educação Corporativa (Grupo Stellantis)</em></p>
+                  <ul>
+                    <li>Desenvolvimento de conteúdo Web / e-Learning para as empresas do grupo Stellantis (Fiat, Jeep,
+                      RAM,
+                      Citroen, Peugeot), CNH Industrial, IVECO Group, atendendo as áreas Técnico e Comercial</li>
+                    <li>Conversão de conteúdos em Flash para HTML5, utilizando o Adobe Animate com uma biblioteca SCORM
+                      preparada para especificamente para estes conteúdos</li>
+                    <li>Responsável pelo desenvolvimento de objetos educacionais</li>
+                    <li>Gamificação de conteúdos para e-Learning</li>
+                    <li>Especialista no padrão SCORM</li>
+                    <li>Governança de Plataforma LMS</li>
+                    <li>Desenvolvimento de conteúdos em HTML5 / CSS / JS</li>
+                    <li>Desenvolvimento de conteúdos em Articulate Storyline 360</li>
+                    <li>Soluções SCORM para conteúdos em vídeo</li>
+                  </ul>
+                </article>
+
+                <article class="experience-item">
+                  <h4>Desenvolvedor Web | JavaScript | e-Learning</h4>
+                  <h5>03/2014 - </h5>
+                  <p class="company"><em>Tbyte Soluções Digitais</em></p>
+                  <ul>
+                    <li>Prestação de serviços sob demanda</li>
+                    <li>Desenvolvimento de sistemas e sites sob demanda</li>
+                    <li>Desenvolvimento de projetos gráficos sob demanda</li>
+                    <li>Desenvolvimento de conteúdo Web / e-Learning</li>
+                    <li>Desenvolvimento de objetos educacionais</li>
+                    <li>Gamificação de conteúdos para e-Learning</li>
+                    <li>Especialista no padrão SCORM</li>
+                    <li>Desenvolvimento de conteúdos em HTML5 / CSS / JS</li>
+                    <li>Desenvolvimento de conteúdos em Articulate Storyline 360</li>
+                    <li>Soluções SCORM para conteúdos em vídeo</li>
+                    <li>Soluções SCORM para conteúdos em PDF</li>
+                  </ul>
+                </article>
+              </div>
+            </div><!-- End Experience Section -->
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Serviços</h2>
+        <p>Competências me permitem unir tecnologia, didática e design para entregar soluções inovadoras e eficazes em
+          educação online.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center g-5 pb-5 mb-5 mb-sm-0">
+
+          <div class="col-10 col-md-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <div class="service-content">
+                <h3>Desenvolvimento Web</h3>
+                <p>HTML5, CSS3, JavaScript e frameworks modernos.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-10 col-md-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-mortarboard"></i>
+              </div>
+              <div class="service-content">
+                <h3>E-learning</h3>
+                <p>Criação de cursos interativos, objetos educacionais e conteúdos compatíveis com SCORM.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-10 col-md-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <div class="service-content">
+                <h3>LMS | LXP</h3>
+                <p>Integração, personalização e suporte à plataformas de aprendizagem.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-10 col-md-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-book"></i>
+              </div>
+              <div class="service-content">
+                <h3>Design Instrucional</h3>
+                <p>Estruturação de conteúdos, roteiros de aprendizagem e usabilidade.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-10 col-md-6" data-aos="fade-right" data-aos-delay="300">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-layers"></i>
+              </div>
+              <div class="service-content">
+                <h3>Ferramentas de Autoria</h3>
+                <p>Articulate Storyline, Adobe Captivate, entre outras.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-10 col-md-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-kanban"></i>
+              </div>
+              <div class="service-content">
+                <h3>Gestão de Projetos</h3>
+                <p>Organização, versionamento e entrega de soluções digitais de ponta a ponta.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-10 col-md-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="bi bi-vector-pen"></i>
+              </div>
+              <div class="service-content">
+                <h3>Design Gráfico</h3>
+                <p>Produção e edição de objetos vetoriais de Design Gráfico (Photoshop, Illustrator).</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portifólio</h2>
+        <p>Abaixo, apresento alguns dos trabalhos relevantes em que contribuí, destacando aspectos de Desenvolvimento
+          Web, Design Instrucional e Design Gráfico.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-html5">HTML5</li>
+            <li data-filter=".filter-html5_adobe-animate">HTML5 - Adobe Animate</li>
+            <li data-filter=".filter-html5_flash">Conversão Flash - HTML5</li>
+            <li data-filter=".filter-video_scorm">Video SCORM</li>
+            <li data-filter=".filter-storyline_360">Storyline 360</li>
+            <li data-filter=".filter-lms_lxp">LMS | LXP</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row pt-5 gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-lms_lxp">
+              <div class="portfolio-card">
+                <div class="portfolio-img">
+                  <img src="assets/img/portifolio/leroy_lex_relatorios.png" alt="Portfolio Item" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <a href="assets/img/portifolio/leroy_lex_relatorios.png" class="glightbox portfolio-lightbox"><i
+                        class="bi bi-plus"></i></a>
+
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>LMS | LXP</h4>
+                  <p>Administração de plataforma LXP - Relatórios</p>
+                  <!-- <div class="portfolio-tags">
+                    <span>Strategy</span>
+                    <span>Consulting</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-storyline_360">
+              <div class="portfolio-card">
+                <div class="portfolio-img">
+                  <img src="assets/img/portifolio/ram_dakota.png" alt="Portfolio Item" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <a href="assets/img/portifolio/ram_dakota.png" class="glightbox portfolio-lightbox"><i
+                        class="bi bi-plus"></i></a>
+
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>Articulate Storyline 360</h4>
+                  <p>HTML5, JS, SCORM</p>
+                  <!-- <div class="portfolio-tags">
+                    <span>Strategy</span>
+                    <span>Consulting</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-html5">
+              <div class="portfolio-card">
+                <div class="portfolio-img">
+                  <img src="assets/img/portifolio/iveco_cssp.png" alt="Portfolio Item" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <a href="assets/img/portifolio/iveco_cssp.png" class="glightbox portfolio-lightbox"><i
+                        class="bi bi-plus"></i></a>
+
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>HTML5</h4>
+                  <p>Reveal.js, HTML5, Quiz</p>
+                  <!-- <div class="portfolio-tags">
+                    <span>Strategy</span>
+                    <span>Consulting</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-storyline_360">
+              <div class="portfolio-card">
+                <div class="portfolio-img">
+                  <img src="assets/img/portifolio/jeep_avenger.png" alt="Portfolio Item" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <a href="assets/img/portifolio/jeep_avenger.png" class="glightbox portfolio-lightbox"><i
+                        class="bi bi-plus"></i></a>
+
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>Articulate Storyline 360</h4>
+                  <p>HTML5, JS, SCORM</p>
+                  <!-- <div class="portfolio-tags">
+                    <span>Strategy</span>
+                    <span>Consulting</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-lms_lxp">
+              <div class="portfolio-card">
+                <div class="portfolio-img">
+                  <img src="assets/img/portifolio/leroy_lex_usuarios.png" alt="Portfolio Item" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <a href="assets/img/portifolio/leroy_lex_usuarios.png" class="glightbox portfolio-lightbox"><i
+                        class="bi bi-plus"></i></a>
+
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>LMS | LXP</h4>
+                  <p>Administração de plataforma LXP - Usuários</p>
+                  <!-- <div class="portfolio-tags">
+                    <span>Strategy</span>
+                    <span>Consulting</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-html5_flash">
+              <div class="portfolio-card">
+                <div class="portfolio-img">
+                  <img src="assets/img/portifolio/iveco_conc_fund_motor.png" alt="Portfolio Item" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <a href="assets/img/portifolio/iveco_conc_fund_motor.png" class="glightbox portfolio-lightbox"><i
+                        class="bi bi-plus"></i></a>
+
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>Conversão Flash - HTML5</h4>
+                  <p>Animate, HTML5, SCORM</p>
+                  <!-- <div class="portfolio-tags">
+                    <span>Strategy</span>
+                    <span>Consulting</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-lms_lxp">
+              <div class="portfolio-card">
+                <div class="portfolio-img">
+                  <img src="assets/img/portifolio/leroy_lex_certificados.png" alt="Portfolio Item" class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <a href="assets/img/portifolio/leroy_lex_certificados.png" class="glightbox portfolio-lightbox"><i
+                        class="bi bi-plus"></i></a>
+
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>LMS | LXP</h4>
+                  <p>Administração de plataforma LXP - Certificados</p>
+                  <!-- <div class="portfolio-tags">
+                    <span>Strategy</span>
+                    <span>Consulting</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-html5">
+              <div class="portfolio-card">
+                <div class="portfolio-img">
+                  <img src="assets/img/portifolio/stellantis_motor_turbo_flex.png" alt="Portfolio Item"
+                    class="img-fluid">
+                  <div class="portfolio-overlay">
+                    <a href="assets/img/portifolio/stellantis_motor_turbo_flex.png"
+                      class="glightbox portfolio-lightbox"><i class="bi bi-plus"></i></a>
+
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>HTML5</h4>
+                  <p>Reveal.js, HTML5, Quiz</p>
+                  <!-- <div class="portfolio-tags">
+                    <span>Strategy</span>
+                    <span>Consulting</span>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div><!-- End Portfolio Items Container -->
+
+        </div>
+
+
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contato</h2>
+        <p>Entre em contato através das opções abaixo</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="info-box row d-flex px-3 px-sm-0 gy-0 justify-content-center align-items-center">
+          <div class="col-lg-4 px-4">
+            <!-- Info Item -->
+            <div class="row info-item d-flex align-items-center justify-content-center" data-aos="fade-up"
+              data-aos-delay="300">
+              <div class="col-2 pe-5">
+                <div class="row w-100">
+                  <div class="col-6 me-4 py-1">
+                    <div class="icon-box">
+                      <i class="bi bi-telephone flex-shrink-0"></i>
+                    </div>
+                  </div>
+                  <div class="col-6 me-4 py-1">
+                    <div class="icon-box">
+                      <i class="bi bi-whatsapp"></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 ">
+                <div class="content">
+                  <h4>Telefone</h4>
+                  <p>+55 31 99237-8609</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Info Item -->
+          </div>
+
+          <div class="col-lg-4 px-4">
+            <!-- Info Item -->
+            <div class="row info-item d-flex align-items-center justify-content-center" data-aos="fade-up"
+              data-aos-delay="300">
+
+              <div class="col-2 pe-5">
+                <div class="row">
+                  <div class="col-6 me-4 py-1">
+                    <div class="icon-box">
+                      <i class="bi bi-envelope flex-shrink-0"></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="content">
+                  <h4>E-mail</h4>
+                  <p>danielfantoni@msn.com</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Info Item -->
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer">
+
     <div class="container">
-      <!-- <div class="social-links d-flex justify-content-center">
+      <div class="copyright text-center ">
+        <span>Copyright </span><span>&copy; </span><span id="mostrarAnoAtual"> </span>
+        <p>
+          <strong class="px-1 sitename">Tbyte Soluções Digitais</strong> <!-- <span>All Rights Reserved</span> -->
+        </p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
         <a href="https://www.instagram.com/_fantonidaniel/#" target="_blank"><i class="bi bi-instagram"></i></a>
         <a href="https://www.linkedin.com/in/daniel-fantoni-7220991b0/" target="_blank"><i
             class="bi bi-linkedin"></i></a>
-      </div> -->
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright </span><span>&copy; </span><span id="mostrarAnoAtual"> </span> <strong
-            class="px-1 sitename">Tbyte Soluções Digitais</strong> <!-- <span>All Rights Reserved</span> -->
-        </div>
-        <div class="credits">
-          <!--  -->
-        </div>
       </div>
+      <!--       <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a
+          href="https://bootstrapmade.com/tools/">DevTools</a>
+      </div> -->
     </div>
+
   </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
   <!-- Preloader -->
   <div id="preloader"></div>
-</body>
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/typed.js/typed.umd.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
 
 </html>
