@@ -8,8 +8,8 @@
   /* --default-font: "Estrangelo Edessa", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
   /* --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif; */
-  --heading-font: "Estrangelo Edessa",  sans-serif;
-  --nav-font: "Estrangelo Edessa",  sans-serif;
+  --heading-font: "Estrangelo Edessa", sans-serif;
+  --nav-font: "Estrangelo Edessa", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -168,12 +168,13 @@ h6 {
   /* max-height: 100px; */
   margin-right: 8px;
 }
-/* @media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 600px) {
   .header .logo img {
-  margin-right: 8px;
-  margin-left: 18px;
+    /* margin-right: 8px; */
+    margin-left: 1rem;
+  }
 }
-} */
 
 /* .header .logo h1 {
   font-size: 32px;
@@ -358,9 +359,8 @@ h6 {
 }
 
 .navmenu ul p {
-    display: none;
-  color: #000;
-  }
+  display: none;
+}
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
@@ -690,7 +690,7 @@ section,
 
   section,
   .section {
-    padding: 1.875rem 0 0 0;
+    padding: 2.875rem 0 0 0;
   }
 }
 
@@ -754,7 +754,7 @@ section,
 
 @media (max-width: 575.98px) {
   .hero {
-    padding: 5px 0 80px 0;
+    padding: 50px 0 50px 0;
     min-height: 5vh;
   }
 }
@@ -1311,6 +1311,7 @@ section,
   margin-bottom: 1rem;
   font-weight: 600;
   color: var(--destaque-color);
+  text-transform: uppercase;
 }
 
 .skills .skill-box p {
@@ -2863,6 +2864,7 @@ section,
 .contact .info-item .icon-box i {
   font-size: 1.2rem;
   color: var(--destaque-color);
+  padding-top: .5rem;
 }
 
 .contact .info-item .icon-box:hover {

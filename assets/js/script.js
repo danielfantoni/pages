@@ -85,13 +85,50 @@ const dadosJson = [
         titulo: "HTML5",
         texto: "Reveal.js, HTML5, Quiz"
     },
+    {
+        id:9,
+        filter: "filter-storyline_360",
+        img: "stellantis_interacao.png",
+        titulo: "Interação - Navegação Sistemas",
+        texto: "Articulate Storyline 360, HTML5, JS, SCORM"
+    },
+    {
+        id: 10,
+        filter: "filter-html5",
+        img: "iveco_dmsp.png",
+        titulo: "Ajustes | Edição Projetos Terceiros",
+        texto: "Adequação HTML5, JS, Quiz"
+    },
+    {
+        id:11,
+        filter: "filter-storyline_360",
+        img: "leroy_teste-conhecimento.png",
+        titulo: "Testes de Conhecimento",
+        texto: "Articulate Storyline 360, HTML5, JS, SCORM"
+    },
+    {
+        id: 12,
+        filter: "filter-lms_lxp",
+        img: "leroy-modelos-paginas-lex.png",
+        titulo: "Personalização páginas LMS | LXP",
+        texto: "Layout personalizado para páginas de trilhas"
+    },
 ];
 
+shufflePortifolio = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 loadPortifolio = () => {
+    const dataShuffle = shufflePortifolio([...dadosJson]);
     const lista = document.getElementById("items-portifolio");
 
     // Transforma o array em strings de <li> e insere no <ul>
-    lista.innerHTML = dadosJson.map(item =>
+    lista.innerHTML = dataShuffle.map(item =>
         `
 <div class="col-12 px-3 col-lg-4 col-md-6 portfolio-item isotope-item ${item.filter}">
     <div class="portfolio-card">
