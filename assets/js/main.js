@@ -229,6 +229,6 @@ let data2 = new Date('1986-01-08');
 const diffTime = Math.abs(data2 - data1);
 const diffYears = diffTime / (1000 * 60 * 60 * 24 * 365);
 
-idade.innerHTML = Math.floor(diffYears);
+/* idade.innerHTML = Math.floor(diffYears); */
 
 //console.log(Math.floor(diffYears));

@@ -154,7 +154,7 @@ h6 {
   --background-color: rgba(255, 255, 255, 0);
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  padding: 5px 0;
   transition: all 0.5s;
   z-index: 997;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
@@ -165,16 +165,22 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  /* max-height: 100px; */
   margin-right: 8px;
 }
+/* @media only screen and (max-width: 600px) {
+  .header .logo img {
+  margin-right: 8px;
+  margin-left: 18px;
+}
+} */
 
-.header .logo h1 {
+/* .header .logo h1 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
   color: var(--heading-color);
-}
+} */
 
 .header .header-social-links {
   padding-right: 15px;
@@ -683,7 +689,7 @@ section,
 
   section,
   .section {
-    padding: 0;
+    padding: 1.875rem 0 0 0;
   }
 }
 
@@ -739,7 +745,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 80px 0;
+  padding: 10px 0 0 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -747,7 +753,8 @@ section,
 
 @media (max-width: 575.98px) {
   .hero {
-    min-height: 20vh;
+    padding: 5px 0 80px 0;
+    min-height: 5vh;
   }
 }
 
