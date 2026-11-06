@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Aniversário! 🎉</title>
+    <!-- Google Fonts para um visual infantil e divertido -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho / Banner Principal -->
+    <header class="hero-section text-center text-white">
+        <div class="container px-4">
+            <span class="fs-4 d-block mb-2 font-fun">🎈 Você está convidado! 🎈</span>
+            <!-- <h1 class="display-3 fw-bold mb-3 text-warning">O aniversário do Arthur!</h1> -->
+            <div class=" pt-lg-0 mb-2">
+                <img src="assets/img/logo-n.png" alt="Foto do aniversariante" class="img-fluid avatar-topo">
+            </div>
+            <p class="lead fs-3 mb-0">Venha comemorar nossos <b>3 anos</b> com muita diversão, bolo e docinhos!</p>
+            <!-- <div class="badge bg-white text-danger fs-5 px-4 py-2 rounded-pill font-fun shadow-sm">Tema: Fundo do Mar 🐳
+            </div> -->
+        </div>
+    </header>
+
+    <!-- Detalhes do Evento -->
+    <main class="container my-3 py-3">
+        <div class="row g-4 justify-content-center">
+
+            <!-- Data e Hora -->
+            <div class="col-md-4 text-center">
+                <div class="card card-kids p-4 h-100">
+                    <div class="icon-circle text-primary">📅</div>
+                    <h3 class="h5 fw-bold">Quando?</h3>
+                    <p class="mb-0 text-muted fs-5">Sábado, 8 de Dezembro</p>
+                    <p class="text-muted fw-bold">A partir das 16:00h</p>
+                </div>
+            </div>
+
+            <!-- Localização -->
+            <div class="col-md-4 text-center">
+                <div class="card card-kids p-4 h-100">
+                    <div class="icon-circle text-success">📍</div>
+                    <h3 class="h5 fw-bold">Onde?</h3>
+                    <p class="mb-0 text-muted">Buffet Magia & Alegria</p>
+                    <p class="text-muted small">Rua Xxxxxx, 123 - Bairro Feliz</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Seção de Confirmação de Presença (RSVP) -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card card-kids p-4 p-sm-5 text-center">
+                    <h2 class="mb-3 text-success">Confirme sua Presença</h2>
+                    <p class="text-muted mb-4">Para nos ajudar a organizar tudo com muito carinho, por favor confirme se
+                        você poderá ir até o dia 10/10.</p>
+
+                    <form id="rsvpForm" class="text-start">
+                        <div class="mb-3">
+                            <label for="guestName" class="form-label fw-semibold">Seu Nome:</label>
+                            <input type="text" class="form-control form-control-lg rounded-3" id="guestName"
+                                placeholder="Ex: Maria Silva" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="guestCount" class="form-label fw-semibold">Quantos adultos e crianças vão com
+                                você?</label>
+                            <select class="form-select form-control-lg rounded-3" id="guestCount">
+                                <option value="1">Apenas eu (1)</option>
+                                <option value="2">Vou levar +1 pessoa (2)</option>
+                                <option value="3">Vou levar +2 pessoas (3)</option>
+                                <option value="4+">Família completa (4 ou mais)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-kids w-100 fs-5 font-fun shadow-sm">Confirmar Presença
+                            🎉</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card card-kids p-4 p-sm-5 text-center">
+                    <h2 class="mb-3 text-success">Rigistros DB JSON</h2>
+                    
+
+                    <!-- Tabela para exibir os dados lidos -->
+                    <table id="guestsTabela">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Convidados</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Os dados do JSON vão aparecer aqui via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé básico -->
+    <footer class="text-center py-4 bg-light text-muted border-top">
+        <p class="mb-0 small">Esperamos você para essa grande festa! 🎂</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle (com Popper) -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+    <!-- Script Simples de Confirmação -->
+    <script>
+        document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nome = document.getElementById('guestName').value;
+            alert('Obrigado, ' + nome + '! Sua presença foi confirmada com sucesso! 🥳');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
